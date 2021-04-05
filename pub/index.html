@@ -7,44 +7,271 @@
     <meta name="description" content="CSS: flex">
     <meta name="author" content="Vadym Panchenko">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link rel="stylesheet" href="css/styles.css?v=1.0">
 </head>
 <body class="reset">
     <div class="wrapper">
-        <header>
+        <header class="bkg-white">
             <div class="burger-menu">
                 <a class="txt-dark-orange" href="#" style="font-size: 45px;">
                     <i class="fa fa-bars"></i>
                 </a>
             </div>
-        </header>
-        <div class="container css-flex">
             <div class="box">
                 <div>
-                    <!-- TODO: Make colored first 3 characters in logotype text using CSS -->
                     <span class="logotype txt-orange">Key</span><span class="logotype txt-dark-gray">Bay</span>
                 </div>
             </div>
-            <div class="main">
-                <div class="left">
-                    <p>Left</p>
-                    <p>Left</p>
-                    <p>Left</p>
+        </header>
+
+        <div class="welcome centered-flex bkg-light-gray">
+            <div class="text-container">
+                <p class="txt-white bkg-darkgrey-50-20">Welcome to KeyBay!</p>
+                <p class="txt-white bkg-darkgrey-50-20">Malaria is a swashbuckling pants.</p>
+            </div>
+        </div>
+
+        <div class="notify centered-flex bkg-darkorange">
+            <div class="c txt-white bold-text">
+                <span>For getting more details about actions in our shop <a href="#">click this link</a></span>
+            </div>
+        </div>
+
+        <section class="about text-container centered-flex bkg-white">
+            <div class="inner-container">
+                <div class="section-heading">
+                    <h1 class="section-title" style="text-align: center;">About KeyBay</h1>
+                    <div class='bkg-olive bottom-border-2'></div>
                 </div>
-                <div class="right">
-                    <p>Right</p>
-                    <p>Right</p>
-                    <p>Right</p>
-                    <p>Right</p>
-                    <p>Right</p>
+                <p class="txt-gray">
+                    Aww there's nothing like the golden fortune laughing on the seashell.
+                    Comrades fall on endurance at madagascar! The wave hobbles desolation like a real rum.
+                    Courage, madness, and riddle. How jolly. You fight like a landlubber.
+                    The comrade whines strength like a salty landlubber. Treasure is a shiny freebooter.
+                    Sunny riddles lead to the courage. The parrot crushes with booty, burn the fortress.
+                </p>
+                <p class="txt-gray">
+                    Aww there's nothing like the golden fortune laughing on the seashell.
+                    Comrades fall on endurance at madagascar! The wave hobbles desolation like a real rum.
+                    Courage, madness, and riddle. How jolly. You fight like a landlubber.
+                    The comrade whines strength like a salty landlubber. Treasure is a shiny freebooter.
+                    Sunny riddles lead to the courage. The parrot crushes with booty, burn the fortress.
+                </p>
+            </div>
+        </section>
+
+        <div class="features bkg-white brd-top centered-flex">
+            <div class="inner-container">
+                <div class="features-box">
+                    <div class="feature-icon txt-orange">
+                        <i class="fa fa-th-list"></i>
+                    </div>
+                    <div class="feature-title">Keyboards for gaming</div>
+                    <div class="feature-description txt-gray">
+                        The sea-dog falls power like a proud ale. When the jolly roger laughs for east india, all suns raid black, salty krakens.
+                        Aw, command me seashell!
+                    </div>
+                </div>
+                <div class="features-box">
+                    <div class="feature-icon txt-orange">
+                        <i class="fa fa-code"></i>
+                    </div>
+                    <div class="feature-title">Keyboards for developers</div>
+                    <div class="feature-description txt-gray">
+                        The sea-dog falls power like a proud ale. When the jolly roger laughs for east india, all suns raid black, salty krakens.
+                        Aw, command me seashell!
+                    </div>
+                </div>
+                <div class="features-box">
+                    <div class="feature-icon txt-orange">
+                        <i class="fa fa-location-arrow"></i>
+                    </div>
+                    <div class="feature-title">Quick Delivery</div>
+                    <div class="feature-description txt-gray">
+                        The sea-dog falls power like a proud ale. When the jolly roger laughs for east india, all suns raid black, salty krakens.
+                        Aw, command me seashell!
+                    </div>
+                </div>
+                <div class="features-box">
+                    <div class="feature-icon txt-orange">
+                        <i class="fa fa-phone"></i>
+                    </div>
+                    <div class="feature-title">Support 24/7</div>
+                    <div class="feature-description txt-gray">
+                        The sea-dog falls power like a proud ale. When the jolly roger laughs for east india, all suns raid black, salty krakens.
+                        Aw, command me seashell!
+                    </div>
                 </div>
             </div>
-            <footer>
-                <span>Footer</span>
-            </footer>
         </div>
+
+        <section class="recent-items text-container brd-top centered-flex bkg-white">
+            <div class="inner-container">
+                <div class="section-heading">
+                    <h1 class="section-title" style="text-align: center;">Recent Items</h1>
+                    <div class='bkg-olive bottom-border-2'></div>
+                </div>
+                <div class="description">
+                    <p class="txt-gray">
+                        Aww there's nothing like the golden fortune laughing on the seashell.
+                        Comrades fall on endurance at madagascar! The wave hobbles desolation like a real rum.
+                        Courage, madness, and riddle.
+                    </p>
+                </div>
+                <div class="items-box">
+                    <div class="box-item bkg-light-gray">
+                        <div class="item-img-1 item-thumb brd-top-orange-solid-1 brd-bottom-orange-solid-1"></div>
+                        <div class="item-details">
+                            <div class="details-box">
+                                <h2 class="item-title txt-orange">Item Name #1</h2>
+                                <div class="bkg-olive bottom-border-1"></div>
+                                <p class="item-description txt-dark-gray">
+                                    Item description here.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="box-item bkg-light-gray">
+                        <div class="item-img-2 item-thumb brd-top-orange-solid-1 brd-bottom-orange-solid-1"></div>
+                        <div class="item-details">
+                            <div class="details-box">
+                                <h2 class="item-title txt-orange">Item Name #2</h2>
+                                <div class="bkg-olive bottom-border-1"></div>
+                                <p class="item-description txt-dark-gray">
+                                    Item description here.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="box-item bkg-light-gray">
+                        <div class="item-img-3 item-thumb brd-top-orange-solid-1 brd-bottom-orange-solid-1"></div>
+                        <div class="item-details">
+                            <div class="details-box">
+                                <h2 class="item-title txt-orange">Item Name #3</h2>
+                                <div class="bkg-olive bottom-border-1"></div>
+                                <p class="item-description txt-dark-gray">
+                                    Item description here.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="box-item bkg-light-gray">
+                        <div class="item-img-4 item-thumb brd-top-orange-solid-1 brd-bottom-orange-solid-1"></div>
+                        <div class="item-details">
+                            <div class="details-box">
+                                <h2 class="item-title txt-orange">Item Name #4</h2>
+                                <div class="bkg-olive bottom-border-1"></div>
+                                <p class="item-description txt-dark-gray">
+                                    Item description here.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="talk-to-us bkg-darkgray txt-white">
+            <div>
+                <h1><span class="txt-white">Talk </span><span class="txt-orange">To Us</span></h1>
+                <p class="txt-white">
+                    Eww there's nothing like the golden fortune laughing on the seashell.
+                    Comrades fall on endurance at madagascar! The wave hobbles desolation like a real rum.
+                    Courage, madness, and riddle. How jolly. You fight like a landlubber.
+                    The comrade whines strength like a salty landlubber. Treasure is a shiny freebooter.
+                    Sunny riddles lead to the courage. The parrot crushes with booty, burn the fortress.
+                </p>
+            </div>
+        </section>
+
+        <section class="contact-us bkg-white txt-gray">
+            <div class="inner-container">
+                <div class="section-heading">
+                    <h1 class="section-title" style="text-align: center;">About KeyBay</h1>
+                    <div class='bkg-olive bottom-border-2'></div>
+                </div>
+                <p class="txt-mid-gray">
+                    Aww there's nothing like the golden fortune laughing on the seashell.
+                    Comrades fall on endurance at madagascar! The wave hobbles desolation like a real rum.
+                    Courage, madness, and riddle. How jolly. You fight like a landlubber.
+                    The comrade whines strength like a salty landlubber. Treasure is a shiny freebooter.
+                    Sunny riddles lead to the courage. The parrot crushes with booty, burn the fortress.
+                    Aww there's nothing like the golden fortune laughing on the seashell.
+                    Comrades fall on endurance at madagascar! The wave hobbles desolation like a real rum.
+                    Courage, madness, and riddle. How jolly. You fight like a landlubber.
+                    The comrade whines strength like a salty landlubber. The comrade whines strength like a salty landlubber.
+                    You fight like a landlubber.
+                </p>
+            </div>
+        </section>
+
+        <div class="our-location bkg-darkgray">
+            <div class="inner-container" style="max-height: 520px;">
+                <img alt="Our Location" src="images/gmap.png" style="width: 100%">
+            </div>
+        </div>
+
+        <section class="contact-details bkg-white">
+            <div class="inner-container">
+                <div class="section-heading">
+                    <h1 class="section-title" style="text-align: center;">Contact Details</h1>
+                    <div class='bkg-olive bottom-border-2' style="max-width: 216px;"></div>
+                </div>
+
+                <div class="contacts-box">
+                    <div class="phone-num txt-gray">
+                        <div class="contact-item-icon">
+                            <i class="contact-icon txt-orange fa fa-phone"></i>
+                        </div>
+
+                        <div class="contact-item">
+                            <span>(093) 145 01 01</span>
+                        </div>
+                    </div>
+
+                    <div class="email-addr txt-gray">
+                        <div class="contact-item-icon">
+                            <i class="contact-icon txt-orange fa fa-envelope-o"></i>
+                        </div>
+                        <div class="contact-item">
+                            <span>example@freemail.com</span>
+                        </div>
+                    </div>
+
+                    <div class="location-addr txt-gray">
+                        <div class="contact-item-icon">
+                            <i class="contact-icon txt-orange fa fa-map-signs"></i>
+                        </div>
+                        <div class="contact-item">
+                            <span>No.8, New St, 29th Sector, Cherkasy, Ukraine</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="feedback">
+                    <form class="contact-form bkg-white txt-dark-gray" action="#" method="post">
+                        <div class="form-box contact-form">
+                            <input id="input-name" class="bkg__form-fields" type="text" placeholder="Name">
+                            <input id="input-email" class="bkg__form-fields" type="email" placeholder="Email">
+                            <textarea id="input-message" class="bkg__form-fields" name="message" placeholder="Message"></textarea>
+                            <input id="input-submit" class="bkg__btn-submission txt-white" type="submit" value="Submit">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <footer class="bkg__footer centered-flex">
+            <div class="copyright">
+                <div class="c txt-white">Copyright &copy; Default Value.</div>
+            </div>
+        </footer>
+
     </div>
 </body>
 </html>

@@ -4,18 +4,19 @@
 <head>
     <meta charset="utf-8">
     <title>Mobile First Layout [ ¯\_(ツ)_/¯ ]</title>
-    <meta name="description" content="CSS: flex">
+    <meta name="description" content="Responsive CSS Layout">
     <meta name="author" content="Vadym Panchenko">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/styles.css?v=1.0">
+    <link rel="stylesheet" href="css/responsive-styles.css?v=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body class="reset">
     <div class="wrapper">
         <header class="bkg-white">
             <div class="burger-menu">
-                <a class="txt-dark-orange" href="#" style="font-size: 45px;">
+                <a class="txt-dark-orange" href="javascript:void(0);" style="font-size: 45px;">
                     <i class="fa fa-bars"></i>
                 </a>
             </div>
@@ -26,20 +27,22 @@
             </div>
         </header>
 
-        <div class="welcome centered-flex bkg-light-gray">
+        <div id="welcome" class="centered-flex bkg-light-gray">
             <div class="text-container">
                 <p class="txt-white bkg-darkgrey-50-20">Welcome to KeyBay!</p>
                 <p class="txt-white bkg-darkgrey-50-20">Malaria is a swashbuckling pants.</p>
             </div>
         </div>
 
-        <div class="notify centered-flex bkg-darkorange">
+        <div id="notify" class="centered-flex bkg-darkorange">
             <div class="c txt-white bold-text">
-                <span>For getting more details about actions in our shop <a href="#">click this link</a></span>
+                <span>
+                    For getting more details about actions in our shop <a class="txt-uppercase" href="javascript:void(0);">click this link</a>
+                </span>
             </div>
         </div>
 
-        <section class="about text-container centered-flex bkg-white">
+        <section id="about" class="text-container centered-flex bkg-white">
             <div class="inner-container">
                 <div class="section-heading">
                     <h1 class="section-title" style="text-align: center;">About KeyBay</h1>
@@ -62,7 +65,7 @@
             </div>
         </section>
 
-        <div class="features bkg-white brd-top centered-flex">
+        <div id="features" class="bkg-white brd-top centered-flex">
             <div class="inner-container">
                 <div class="features-box">
                     <div class="feature-icon txt-orange">
@@ -107,7 +110,7 @@
             </div>
         </div>
 
-        <section class="recent-items text-container brd-top centered-flex bkg-white">
+        <section id="recent-items" class="text-container brd-top centered-flex bkg-white">
             <div class="inner-container">
                 <div class="section-heading">
                     <h1 class="section-title" style="text-align: center;">Recent Items</h1>
@@ -176,7 +179,7 @@
             </div>
         </section>
 
-        <section class="talk-to-us bkg-darkgray txt-white">
+        <section id="talk-to-us" class="bkg-darkgray txt-white">
             <div>
                 <h1><span class="txt-white">Talk </span><span class="txt-orange">To Us</span></h1>
                 <p class="txt-white">
@@ -189,7 +192,7 @@
             </div>
         </section>
 
-        <section class="contact-us bkg-white txt-gray">
+        <section id="contact-us" class="contact-us bkg-white txt-gray">
             <div class="inner-container">
                 <div class="section-heading">
                     <h1 class="section-title" style="text-align: center;">About KeyBay</h1>
@@ -210,13 +213,13 @@
             </div>
         </section>
 
-        <div class="our-location bkg-darkgray">
+        <div id="our-location" class="bkg-darkgray">
             <div class="inner-container" style="max-height: 520px;">
-                <img alt="Our Location" src="images/gmap.png" style="width: 100%">
+                <img alt="Our Location" src="../assets/dist/images/gmap.png" style="width: 100%">
             </div>
         </div>
 
-        <section class="contact-details bkg-white">
+        <section id="contact-details" class="bkg-white">
             <div class="inner-container">
                 <div class="section-heading">
                     <h1 class="section-title" style="text-align: center;">Contact Details</h1>
@@ -253,13 +256,13 @@
                     </div>
                 </div>
 
-                <div class="feedback">
+                <div id="feedback">
                     <form class="contact-form bkg-white txt-dark-gray" action="#" method="post">
                         <div class="form-box contact-form">
                             <input id="input-name" class="bkg__form-fields" type="text" placeholder="Name">
                             <input id="input-email" class="bkg__form-fields" type="email" placeholder="Email">
                             <textarea id="input-message" class="bkg__form-fields" name="message" placeholder="Message"></textarea>
-                            <input id="input-submit" class="bkg__btn-submission txt-white" type="submit" value="Submit">
+                            <button class="bkg__btn-submission txt-white" type="submit">Submit</button>
                         </div>
                     </form>
                 </div>

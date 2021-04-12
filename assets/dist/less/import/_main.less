@@ -13,8 +13,6 @@ a { color: @white; }
 h1 {
   span {
     font-weight: 500;
-    //font-size: 2.2em;
-    //font-size: 12vw;
     margin: 0;
     padding: 0;
   }
@@ -22,8 +20,6 @@ h1 {
 h1 {
   color: @darkgrey;
   font-weight: 500;
-  //font-size: 1.6em;
-  //font-size: 3vw;
   margin: 0;
   padding: 0;
 }
@@ -77,7 +73,6 @@ footer {
   height: 68px;
 }
 .txt-uppercase { text-transform: uppercase; }
-.logotype { /*font-size: 52px;*/ font-size: 10.078vw;  }
 .clear { clear: both; }
 .reset { margin: 0; }
 
@@ -180,19 +175,9 @@ section {
   .inner-container {
     .features-box {
       width: 100%;
-      //max-width: 306px;
       margin: auto;
       overflow: hidden;
       padding-bottom: 20px;
-      //.feature-icon {
-      //  font-size: 2.1em;
-      //  margin-bottom: 8px;
-      //}
-      //.feature-title {
-      //  font-size: 1.4em;
-      //  font-weight: 400;
-      //  font-style: normal;
-      //}
       .feature-description {
         margin-top: 9px;
         margin-bottom: 9px;
@@ -277,21 +262,15 @@ section {
           max-width: 150px;
           width: 100%;
           .contact-icon {
-            //font-size: 2em;
-            //font-size: 8vw;
           }
         }
         .contact-item {
           text-align: initial;
-          span {
-            //font-size: 1.5em;
-            //font-size: 8vw;
-          }
+          span {}
         }
       }
     }
   }
-//}
 .section-title { text-align: center; }
 .brd-top { border-top: @darkorange solid 8px; }
 
@@ -316,7 +295,6 @@ section {
 /* ------------------------- */
 #feedback {
   form {
-    max-width: 500px;
     text-align: center;
     margin: 0;
     float: left;
@@ -351,23 +329,23 @@ section {
     }
   }
 }
+
 /* Media-queries for different displays */
+/*--------------------------------------*/
 @media screen and (min-width: 320px) {
-  h1 span {
-    //font-size: 2.7em;
+  h1 span,
+  .logotype {
     font-size: 12vw;
     font-weight: 400;
   }
   .section-heading {
     h1 {
-      //font-size: 2.7em;
       font-size: 12vw;
       font-weight: 400;
     }
   }
   h2 {
     font-weight: 400;
-    //font-size: 1.3em;
     font-size: 6vw;
     margin: 4px 0 8px;
   }
@@ -381,13 +359,12 @@ section {
     }
   }
   .contact-icon {
-    //font-size: 2em;
-    font-size: 8vw;
+    font-size: 4vw;
   }
   .contact-item {
     text-align: initial;
     span {
-        font-size: 8vw;
+        font-size: 4vw;
     }
   }
   .feature-icon {
@@ -399,23 +376,24 @@ section {
     font-weight: 400;
     font-style: normal;
   }
+  #feedback form {
+    flex-basis: 90%;
+  }
 }
 @media screen and (min-width: 768px) {
-  h1 span {
-    //font-size: 2.7em;
-    font-size: 12vw;
+  h1 span,
+  .logotype {
+    font-size: 8vw;
     font-weight: 400;
   }
   .section-heading {
     h1 {
-      //font-size: 2.7em;
-      font-size: 12vw;
+      font-size: 8vw;
       font-weight: 400;
     }
   }
   h2 {
     font-weight: 400;
-    //font-size: 1.3em;
     font-size: 6vw;
     margin: 4px 0 8px;
   }
@@ -449,23 +427,25 @@ section {
     font-weight: 400;
     font-style: normal;
   }
+  #feedback form {
+    flex-basis: 90%;
+  }
 }
 @media screen and (min-width: 1024px) {
-  h1 span {
-    font-size: 12vw;
+  h1 span,
+  .logotype  {
+    font-size: 6vw;
     font-weight: 400;
   }
   .section-heading {
     h1 {
-      //font-size: 2.7em;
-      font-size: 12vw;
+      font-size: 2vw;
       font-weight: 400;
     }
   }
   h2 {
     font-weight: 400;
-    //font-size: 1.3em;
-    font-size: 6vw;
+    font-size: 1.3vw;
     margin: 4px 0 8px;
   }
   #notify div {
@@ -478,13 +458,12 @@ section {
     }
   }
   .contact-icon {
-    //font-size: 2em;
-    font-size: 2vw;
+    font-size: 3vw;
   }
   .contact-item {
     text-align: initial;
     span {
-      font-size: 2vw;
+      font-size: 3vw;
     }
   }
   .feature-icon {
@@ -492,8 +471,11 @@ section {
     margin-bottom: 8px;
   }
   .feature-title {
-    font-size: 2vw;
+    font-size: 1.6vw;
     font-weight: 400;
     font-style: normal;
+  }
+  #feedback form {
+    flex-basis: 90%;
   }
 }

@@ -1,0 +1,129 @@
+// TODO: Must be refactored
+
+.our-location {
+  .inner-container {
+    max-height: 520px;
+
+    img {
+      width: 100%;
+    }
+  }
+}
+
+.contact-us,
+.contact-details {
+  padding: 55px 24px 87px 24px;
+}
+
+.contact-us {
+  .section-heading {
+    h1 {
+      font-family: 'UbuntuRegular';
+      font-size: 48px;
+      //font-weight: 400;
+    }
+  }
+
+  .inner-container {
+    p {
+      font-family: 'UbuntuRegular';
+      font-size: 24px;
+      //font-weight: 400;
+      margin-top: 48px;
+    }
+  }
+}
+
+.contact-details {
+  .inner-container {
+    margin: 19px auto;
+
+    .section-heading {
+      .section-title {
+        font-size: 48px;
+        text-align: center;
+      }
+      //TODO: Add styles for underline (max-width: 216px)
+    }
+  }
+
+  .contacts-box {
+    margin-top: 75px;
+    text-align: center;
+    //margin: 0 auto;
+    max-width: 1200px;
+    width: 90%;
+
+    .phone-num,
+    .email-addr,
+    .location-addr {
+      float: left;
+      margin-bottom: 3em;
+      width: 100%;
+
+      .contact-item-icon {
+        float: left;
+        max-width: 150px;
+        width: 100%;
+
+        .contact-icon {
+          font-size: 33px;
+        }
+      }
+
+      .contact-item {
+        text-align: initial;
+
+        span {
+          font-family: 'UbuntuRegular';
+          font-size: 30px;
+        }
+      }
+    }
+  }
+}
+
+.feedback {
+  form {
+    text-align: center;
+    margin: 0;
+    float: left;
+    width: 100%;
+
+    .form-box {
+      margin-bottom: 1em;
+    }
+
+    input,
+    textarea {
+      border: 0;
+      outline: 0;
+      padding: 1em;
+      border-radius: 3px;
+      margin-top: 0.5em;
+      overflow: hidden;
+      width: 100%;
+    }
+
+    textarea {
+      height: 169px;
+    }
+
+    button {
+      border: 0;
+      outline: 0;
+      padding: 1em;
+      border-radius: 3px;
+      margin-top: 1.5em;
+      overflow: hidden;
+      width: 100%;
+      cursor: pointer;
+      max-width: 313px;
+      font-size: 20px;
+
+      &:hover {
+        background-color: @darkorange;
+      }
+    }
+  }
+}

@@ -1,0 +1,157 @@
+@media screen and (min-width: 320px) {
+  .hide-desktop {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .hide-desktop {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .hide-desktop {
+    display: flex;
+  }
+  .hide-mobile {
+    display: none;
+  }
+}
+
+header {
+  background-color: @white;
+  overflow: hidden;
+
+  .hide-desktop {
+    //border: solid red 1px;
+    margin-left: 117px;
+    margin-right: 117px;
+    height: 90px;
+
+    .logo-container {
+      //border: solid green 1px;
+      display: block;
+
+      a {
+        font-family: 'UbuntuRegular';
+        font-size: 22px;
+        font-weight: 600;
+        text-decoration: none;
+      }
+    }
+    .desktop-menu {
+      //border: solid blue 1px;
+      display: flex;
+      margin-left: auto;
+
+      ul.menu {
+        list-style: none;
+
+        li {
+          float: left;
+          padding-right: 24px;
+          border-bottom-color: green;
+          //background-color: red;
+
+          a {
+            //background-color: greenyellow;
+            border-bottom: solid @white 2px;
+            font-family: 'UbuntuRegular';
+            font-size: 15px;
+            display: block;
+            color: @dark;
+            text-decoration: none;
+            //padding: 10px;
+
+            &:hover {
+              border-bottom: solid @mid-orange 2px;
+            }
+
+            //&:hover:after {
+              //border-bottom: solid @mid-orange 2px;
+              //border-bottom: solid @mid-orange 2px;
+            //}
+          }
+        }
+      }
+    }
+  }
+
+  .hide-mobile {
+    .icon-container {
+      display: flex;
+      justify-content: flex-end;
+      padding: 25px 25px;
+
+      .menu-icon {
+        a {
+          font-size: 45px;
+          i {
+            color: @mid-orange;
+            transform: scale(1.5, 1);
+          }
+        }
+      }
+    }
+
+    .mobile-menu {
+      font-family: 'MyriadProRegular';
+      overflow: hidden;
+      position: absolute;
+      display: none;
+      z-index: 1000;
+      width: 100%;
+
+      .menu {
+        position: absolute;
+        background-color: @darkgrey;
+        list-style: none;
+        margin: 0 auto;
+        padding: 0;
+        text-align: center;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: calc(100% - 102px);
+        overflow: auto;
+
+        li {
+          border-bottom: solid @silverdark 1px;
+        }
+
+        a {
+          font-family: UbuntuRegular;
+          font-size: 24px;
+          display: block;
+          text-decoration: none;
+          padding-top: 25px;
+          padding-bottom: 25px;
+          width: 100%;
+
+          &:hover {
+            color: @mid-orange;
+          }
+        }
+      }
+    }
+
+    .menu-open {
+      display: block;
+      height: 100%;
+    }
+
+    .box {
+      font-family: 'MyriadProRegular';
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding-bottom: 95px;
+
+      a {
+        font-size: 72px;
+        text-decoration: none;
+      }
+    }
+  }
+}

@@ -1,157 +1,165 @@
-@media screen and (min-width: 320px) {
-  .hide-desktop {
-    display: none;
-  }
-}
+header {
+    background-color: @white;
+    overflow: hidden;
 
-@media screen and (min-width: 768px) {
-  .hide-desktop {
-    display: none;
-  }
+    .main-menu {
+        .icon-container {
+            display: flex;
+            justify-content: flex-end;
+            padding: 25px 25px;
+
+            .menu-icon {
+                a {
+                    font-size: 45px;
+
+                    i {
+                        color: @mid-orange;
+                        transform: scale(1.5, 1);
+                    }
+                }
+            }
+        }
+
+        .mobile-menu {
+            font-family: 'MyriadProRegular';
+            overflow: hidden;
+            position: absolute;
+            display: none;
+            z-index: 1000;
+            width: 100%;
+
+            .menu {
+                background-color: @darkgrey;
+                list-style: none;
+                margin: 0 auto;
+                padding: 0;
+                text-align: center;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: calc(100% - 89px);
+                overflow: auto;
+
+                li {
+                    border-bottom: solid @silverdark 1px;
+                }
+
+                a {
+                    font-family: UbuntuRegular;
+                    font-size: 24px;
+                    display: block;
+                    text-decoration: none;
+                    padding-top: 25px;
+                    padding-bottom: 25px;
+                    width: 100%;
+                    transition: all 0.3s;
+
+                    &:hover {
+                        color: @mid-orange;
+                    }
+                }
+            }
+        }
+
+        .menu-open {
+            display: block;
+            height: 100%;
+        }
+
+        .box {
+            font-family: 'MyriadProRegular';
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding-bottom: 95px;
+
+            a {
+                font-size: 72px;
+                text-decoration: none;
+            }
+        }
+    }
 }
 
 @media screen and (min-width: 1024px) {
-  .hide-desktop {
-    display: flex;
-  }
-  .hide-mobile {
-    display: none;
-  }
-}
+    header {
+        .main-menu {
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: space-between;
+            margin-left: 117px;
+            margin-right: 117px;
+            padding-top: 25px;
+            padding-bottom: 25px;
 
-header {
-  background-color: @white;
-  overflow: hidden;
+            div.box {
+                padding-bottom: 0;
 
-  .hide-desktop {
-    //border: solid red 1px;
-    margin-left: 117px;
-    margin-right: 117px;
-    height: 90px;
-
-    .logo-container {
-      //border: solid green 1px;
-      display: block;
-
-      a {
-        font-family: 'UbuntuRegular';
-        font-size: 22px;
-        font-weight: 600;
-        text-decoration: none;
-      }
-    }
-    .desktop-menu {
-      //border: solid blue 1px;
-      display: flex;
-      margin-left: auto;
-
-      ul.menu {
-        list-style: none;
-
-        li {
-          float: left;
-          padding-right: 24px;
-          border-bottom-color: green;
-          //background-color: red;
-
-          a {
-            //background-color: greenyellow;
-            border-bottom: solid @white 2px;
-            font-family: 'UbuntuRegular';
-            font-size: 15px;
-            display: block;
-            color: @dark;
-            text-decoration: none;
-            //padding: 10px;
-
-            &:hover {
-              border-bottom: solid @mid-orange 2px;
+                a {
+                    font-family: 'UbuntuRegular';
+                    font-size: 22px;
+                    font-weight: 600;
+                    text-decoration: none;
+                }
             }
 
-            //&:hover:after {
-              //border-bottom: solid @mid-orange 2px;
-              //border-bottom: solid @mid-orange 2px;
-            //}
-          }
+            .icon-container {
+                display: none;
+            }
+
+            div.mobile-menu {
+                background-color: transparent;
+                display: flex;
+                position: relative;
+                margin-left: auto;
+
+                ul.menu {
+                    background-color: @white;
+                    //position: static;
+                    //display: flex;
+                    margin-top: 0; // increase this value for correction
+                    width: auto;
+                    height: 22px;
+
+                    li {
+                        float: left;
+                        border-bottom: 0;
+                        padding-right: 24px;
+
+                        a {
+                            border-bottom: solid @white 2px;
+                            font-family: 'UbuntuRegular';
+                            font-size: 15px;
+                            display: block;
+                            color: @dark;
+                            text-decoration: none;
+                            position: relative;
+                            height: 15px;
+                            padding: 0 0 1px 0;
+                            transition: none;
+
+                            &:hover {
+                                color: @dark;
+                                border-bottom: solid @mid-orange 2px;
+
+                                &:after {
+                                    display: block;
+                                    content: '';
+                                    width: 0;
+                                    height: 0;
+                                    border-left: 5px solid transparent;
+                                    border-right: 5px solid transparent;
+                                    border-top: 5px solid @mid-orange;
+                                    position: absolute;
+                                    left: 50%;
+                                    transform: translate(-50%, 0);
+                                    bottom: -6px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
         }
-      }
     }
-  }
-
-  .hide-mobile {
-    .icon-container {
-      display: flex;
-      justify-content: flex-end;
-      padding: 25px 25px;
-
-      .menu-icon {
-        a {
-          font-size: 45px;
-          i {
-            color: @mid-orange;
-            transform: scale(1.5, 1);
-          }
-        }
-      }
-    }
-
-    .mobile-menu {
-      font-family: 'MyriadProRegular';
-      overflow: hidden;
-      position: absolute;
-      display: none;
-      z-index: 1000;
-      width: 100%;
-
-      .menu {
-        position: absolute;
-        background-color: @darkgrey;
-        list-style: none;
-        margin: 0 auto;
-        padding: 0;
-        text-align: center;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: calc(100% - 102px);
-        overflow: auto;
-
-        li {
-          border-bottom: solid @silverdark 1px;
-        }
-
-        a {
-          font-family: UbuntuRegular;
-          font-size: 24px;
-          display: block;
-          text-decoration: none;
-          padding-top: 25px;
-          padding-bottom: 25px;
-          width: 100%;
-
-          &:hover {
-            color: @mid-orange;
-          }
-        }
-      }
-    }
-
-    .menu-open {
-      display: block;
-      height: 100%;
-    }
-
-    .box {
-      font-family: 'MyriadProRegular';
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding-bottom: 95px;
-
-      a {
-        font-size: 72px;
-        text-decoration: none;
-      }
-    }
-  }
 }

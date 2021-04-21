@@ -1,83 +1,127 @@
 .recent-items {
-  padding: 80px 31px 53px 31px;
+    border-top: #f36b47 solid 8px;
+    padding: 80px 31px 53px 31px;
 
-  .inner-container {
-    .section-heading {
-      h1 {
-        font-size: 26px;
-        font-weight: 600;
-      }
-    }
-
-    .description {
-      font-family: 'MyriadProRegular';
-      margin: 20px auto 80px;
-
-      p {
-        font-size: 18px;
-        font-weight: 400;
-        max-width: 50em;
-        margin: auto;
-        padding: 0 32px 0;
-        text-align: center;
-      }
-    }
-
-    .items-box {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-
-      width: 100%;
-      margin: auto;
-      overflow: hidden;
-
-      .box-item {
-        border: solid @silverdark 1px;
-        margin: 0 45px 60px;
-
-        img {
-          height: 165px;
-          width: 100%;
-          margin: auto;
+    .inner-container {
+        .section-heading {
+            h1 {
+                font-size: 26px;
+                font-weight: 600;
+            }
         }
 
-        .item-details {
-          .details-box {
-            padding-left: 8px;
-            padding-right: 8px;
-            box-shadow: 0 1px 5px @light-gray-shadow;
+        .description {
+            font-family: 'MyriadProRegular';
+            margin: 20px auto 80px;
 
-            .item-title {
-              font-family: 'UbuntuRegular';
-              border-bottom: solid #d5d3d3 1px;
-              margin-bottom: 0;
-              margin-top: 0;
-              padding: 0;
-              font-size: 24px;
+            p {
+                font-size: 18px;
+                font-weight: 400;
+                max-width: 50em;
+                margin: auto;
+                padding: 0 32px 0;
+                text-align: center;
             }
-
-            .item-description {
-              font-family: 'UbuntuRegular';
-              font-size: 18px;
-              //font-weight: 400;
-              margin: auto;
-              padding-bottom: 5px;
-            }
-          }
         }
-      }
+
+        .items-box {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+
+            width: 100%;
+            margin: auto;
+            overflow: hidden;
+
+            .box-item {
+                border: solid @silverdark 1px;
+                margin: 0 45px 60px;
+
+                img {
+                    height: 165px;
+                    width: 100%;
+                    margin: auto;
+                }
+
+                .item-details {
+                    box-shadow: 0 0 10px @light-gray-shadow;
+
+                    .details-box {
+                        padding-left: 10px;
+                        padding-right: 10px;
+
+                        .item-title {
+                            font-family: 'UbuntuMedium';
+                            border-bottom: solid #d5d3d3 1px;
+                            margin-bottom: 0;
+                            margin-top: 0;
+                            padding: 0;
+                            font-size: 24px;
+                        }
+
+                        .item-description {
+                            font-family: 'UbuntuRegular';
+                            font-size: 18px;
+                            //font-weight: 400;
+                            margin: auto;
+                            padding-bottom: 5px;
+                        }
+                    }
+                }
+            }
+        }
     }
-  }
+}
 
-  //TODO: Check & Fix this hierarchy
-  //.recent-items {
-  //  padding-top: 60px;
+@media screen and (min-width: 1024px) {
+    .recent-items {
+        border-top: transparent solid 8px;
 
-  // <???>
+        .inner-container {
+            .description {
+                font-family: 'UbuntuRegular';
+                margin: 20px auto 30px;
 
-  //.box-item {
-  //  margin: 30px 0 60px;
-  //
-  //}
+                p {
+                    font-size: 16px;
+                }
+            }
+
+            .items-box {
+                display: flex;
+                flex-wrap: initial;
+                justify-content: right;
+                width: 100%;
+                overflow: auto;
+
+                .box-item {
+                    margin: 0 25px 60px;
+
+                    img {
+                        height: 165px;
+                        width: calc(100% - 150px)/4;
+                        margin: auto;
+                    }
+
+                    .item-details {
+                        .details-box {
+                            .item-title {
+                                font-size: 16px;
+                                padding-bottom: 2px;
+                                padding-top: 5px;
+                                text-align: end;
+                            }
+
+                            .item-description {
+                                p {
+                                    font-size: 12px;
+                                    text-align: end;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 }

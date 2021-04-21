@@ -1,325 +1,276 @@
 /* Declare fonts */
 /* ------------- */
 @font-face {
-  font-family: 'MyriadProRegular';
-  src: url("../fonts/MyriadPro-R.eot");
-  src: url("../fonts/MyriadPro-R.eot?#iefix") format("embedded-opentype"),
-       url("../fonts/MyriadPro-R.woff2") format("woff2"),
-       url("../fonts/MyriadPro-R.woff") format("woff"),
-       url('../fonts/MyriadPro-R.ttf') format('truetype'),
-       url('../fonts/MyriadPro-R.svg') format('svg');
+    font-family: 'MyriadProRegular';
+    font-weight: auto;
+    src: url("../fonts/MyriadPro-R.eot");
+    src: url("../fonts/MyriadPro-R.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/MyriadPro-R.woff2") format("woff2"),
+    url("../fonts/MyriadPro-R.woff") format("woff"),
+    url("../fonts/MyriadPro-R.ttf") format("truetype"),
+    url("../fonts/MyriadPro-R.otf") format("opentype"),
+    url("../fonts/MyriadPro-R.svg") format("svg");
 }
 
 @font-face {
-  font-family: 'UbuntuRegular';
-  src: url("../fonts/Ubuntu-R.eot");
-  src: url("../fonts/Ubuntu-R.eot?#iefix") format("embedded-opentype"),
-  url("../fonts/Ubuntu-R.woff2") format("woff2"),
-  url("../fonts/Ubuntu-R.woff") format("woff"),
-  url('../fonts/Ubuntu-R.ttf') format('truetype'),
-  url('../fonts/Ubuntu-R.svg') format('svg');
+    font-family: 'UbuntuRegular';
+    font-weight: auto;
+    src: url("../fonts/Ubuntu-R.eot");
+    src: url("../fonts/Ubuntu-R.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/Ubuntu-R.woff2") format("woff2"),
+    url("../fonts/Ubuntu-R.woff") format("woff"),
+    url("../fonts/Ubuntu-R.ttf") format("truetype"),
+    url("../fonts/Ubuntu-R.otf") format("opentype"),
+    url("../fonts/Ubuntu-R.svg") format("svg");
+}
+
+@font-face {
+    font-family: 'UbuntuMedium';
+    font-weight: auto;
+    src: url("../fonts/Ubuntu-Medium.eot");
+    src: url("../fonts/Ubuntu-Medium.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/Ubuntu-Medium.woff2") format("woff2"),
+    url("../fonts/Ubuntu-Medium.woff") format("woff"),
+    url("../fonts/Ubuntu-Medium.ttf") format("truetype"),
+    url("../fonts/Ubuntu-Medium.otf") format("opentype"),
+    url("../fonts/Ubuntu-Medium.svg") format("svg");
 }
 
 /* General styles */
 /* -------------- */
-body { margin: 0 auto; }
+body {
+    margin: 0 auto;
+}
+
+body.menu-open {
+    overflow: hidden;
+}
 
 a {
-  color: @white;
+    color: @white;
 }
 
 h1 {
-  color: @darkgrey;
-  font-weight: 500;
-  margin: 0;
-  padding: 0;
-
-  span {
+    color: @darkgrey;
     font-weight: 500;
     margin: 0;
     padding: 0;
-  }
+
+    span {
+        font-weight: 500;
+        margin: 0;
+        padding: 0;
+    }
 }
 
 .inner-container {
-  width: 100%;
-  max-width: 1200px;
-  margin: auto;
-  overflow: hidden;
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    overflow: hidden;
 }
 
 .section-heading {
-  font-family: 'UbuntuRegular';
-  display: inline-block;
-  margin: 0;
-  overflow: hidden;
-  max-width: 216em;
+    font-family: 'UbuntuRegular';
+    display: inline-block;
+    margin: 0;
+    overflow: hidden;
+    max-width: 216em;
 }
 
 .centered-flex {
-  display: flex;
-  position: relative;
-  justify-content: center;
-  align-items: center;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
 }
 
 .fixed-centered-flex {
-  display:flex;
-  position: fixed;
-  justify-content:center;
-  align-items:center;
+    display: flex;
+    position: fixed;
+    justify-content: center;
+    align-items: center;
 }
 
-.txt-uppercase { text-transform: uppercase; }
+.txt-uppercase {
+    text-transform: uppercase;
+}
 
 /* Declare border styles */
 /* --------------------- */
 .brd-top-orange-solid-1 {
-  border-top: solid @orange 1px;
+    border-top: solid @orange 1px;
 }
 
 .brd-bottom-orange-solid-1 {
-  border-bottom: solid @orange 1px;
+    border-bottom: solid @orange 1px;
 }
 
 .bottom-border-1 {
-  height: 1px;
-  margin: 4px auto;
-  max-width: 95%;
+    height: 1px;
+    margin: 4px auto;
+    max-width: 95%;
 }
 
 .bottom-border-2 {
-  height: 2px;
-  margin: 4px auto;
+    height: 2px;
+    margin: 4px auto;
 }
 
 .solid-underline-2 {
-  text-decoration-line: underline;
-  text-decoration-style: solid;
-  text-decoration-thickness: 2px;
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+    text-decoration-thickness: 2px;
 }
 
 /* Declare text color's */
 /* -------------------- */
-.txt-gray { color: @gray; }
-.txt-mid-gray { color: @mid-gray; }
-.txt-dark-gray { color: @darker-gray; }
-.txt-orange { color: @mid-orange; }
-.txt-dark-orange { color: @darkorange; }
-.txt-white { color: @white; }
+.txt-gray {
+    color: @gray;
+}
+
+.txt-mid-gray {
+    color: @mid-gray;
+}
+
+.txt-dark-gray {
+    color: @darker-gray;
+}
+
+.txt-orange {
+    color: @mid-orange;
+}
+
+.txt-dark-orange {
+    color: @darkorange;
+}
+
+.txt-white {
+    color: @white;
+}
+
+.txt-dark-silver {
+  color: @dark-silver;
+}
+
+.txt-mid-orange-alt {
+    color: @mid-orange-alt;
+}
 
 /* Declare text extension */
 /* ---------------------- */
-.bold-text { font-weight: bold; }
+.bold-text {
+    font-weight: bold;
+}
 
 /* Declare styles for sections */
 /* --------------------------- */
 .about,
 .features,
 .recent-items {
-  display: block;
-  padding: 40px 31px 31px 31px;
-  text-align: center;
+    display: block;
+    padding: 40px 31px 31px 31px;
+    text-align: center;
 }
 
 section {
-  padding: 0;
-  text-align: center;
-  height: 100%;
+    padding: 0;
+    text-align: center;
+    height: 100%;
 }
 
 .text-container {
-  display: block;
-  position: relative;
-  overflow: hidden;
+    display: block;
+    position: relative;
+    overflow: hidden;
 }
 
 .description {
-  margin: 20px auto 48px;
-  //text-align: justify;
+    margin: 20px auto 48px;
 }
 
 .section-title {
-  text-align: center;
-  border-bottom: solid @mid-orange 2px;
-  padding-bottom: 2px;
+    text-align: center;
+    border-bottom: solid @mid-orange 2px;
+    padding-bottom: 2px;
 }
-
-.brd-top { border-top: @mid-orange solid 8px; }
 
 /* Declare extended background colors (with alpha / background transparency) */
 /* ------------------------------------------------------------------------- */
-.bkg-darkgrey-50-20 { background: @darkgrey-50-20; }
+.bkg-darkgrey-50-20 {
+    background: @darkgrey-50-20;
+}
 
 /* Declare background colors */
 /* ------------------------- */
-.bkg-white { background-color: @white; }
-.bkg-light-orange { background-color: @light-orange; }
-.bkg-darkorange { background-color: @darkorange; }
-.bkg-mid-orange { background-color: @mid-orange }
-.bkg-light-gray { background-color: @light-gray; }
-.bkg-darkgray { background-color: @darkgray; }
-.bkg-darker-gray { background-color: @darker-gray; }
-.bkg__btn-submission { background-color: @orange; }
-.bkg__form-fields { background-color: @silver; }
-.bkg__footer { background-color: @orange-alt; }
+.bkg-white {
+    background-color: @white;
+}
+
+.bkg-light-orange {
+    background-color: @light-orange;
+}
+
+.bkg-darkorange {
+    background-color: @darkorange;
+}
+
+.bkg-mid-orange {
+    background-color: @mid-orange
+}
+
+.bkg-light-gray {
+    background-color: @light-gray;
+}
+
+.bkg-darkgray {
+    background-color: @darkgray;
+}
+
+.bkg-darker-gray {
+    background-color: @darker-gray;
+}
+
+.bkg__btn-submission {
+    background-color: @orange;
+}
+
+.bkg__form-fields {
+    background-color: @silver;
+}
+
+.bkg__footer {
+    background-color: @orange-alt;
+}
 
 /* Media-queries for different displays */
 /*--------------------------------------*/
 @media screen and (min-width: 320px) {
-  //h1 span,
-  //.logotype {
-  //  font-size: 72px;
-  //  font-weight: 400;
-  //}
-  //.section-heading {
-  //  h1 {
-  //    font-size: 12vw;
-  //    font-weight: 400;
-  //  }
-  //}
-  //h2 {
-  //  font-weight: 400;
-  //  font-size: 6vw;
-  //  margin: 4px 0 8px;
-  //}
-
-  .notify div {
-    flex-basis: 90%;
-  }
-
-  .recent-items {
-    .items-box {
-      .box-item {
-        width: 100%;
-        max-width: 250px;
-      }
+    .notify div {
+        flex-basis: 90%;
     }
-  }
 
-  //.contact-icon {
-  //  font-size: 4vw;
-  //}
+    .recent-items {
+        .items-box {
+            .box-item {
+                width: 250px;
+            }
+        }
+    }
 
-  //.contact-item {
-  //  text-align: initial;
-  //  span {
-  //      font-size: 4vw;
-  //  }
-  //}
-
-  //.feature-icon {
-  //  font-size: 5vw;
-  //  margin-bottom: 8px;
-  //}
-
-  //.feature-title {
-  //  font-size: 5vw;
-  //  font-weight: 400;
-  //  font-style: normal;
-  //}
-  #feedback form {
-    flex-basis: 90%;
-  }
+    #feedback form {
+        flex-basis: 90%;
+    }
 }
 
 @media screen and (min-width: 768px) {
-  //h1 span,
-  //.logotype {
-  //  font-size: 72px;
-  //  font-weight: 400;
-  //}
-  //.section-heading {
-  //  h1 {
-  //    font-size: 8vw;
-      //font-weight: 400;
-    //}
-  //}
-  //h2 {
-  //  font-weight: 400;
-  //  font-size: 6vw;
-    //margin: 4px 0 8px;
-  //}
-  .notify div {
-    flex-basis: 90%;
-  }
-  //.features div.inner-container div.features-box {
-  //  flex-basis: 100%;
-  //}
-  //.recent-items {
-  //  div.items-box,
-  //  div.box-item {
-  //    flex-basis: 70%;
-  //  }
-  //}
-  //.contact-icon {
-    //font-size: 4vw;
-  //}
-  //.contact-item {
-  //  text-align: initial;
-  //  span {
-  //    font-size: 4vw;
-  //  }
-  //}
-  //.feature-icon {
-    //font-size: 2vw;
-    //margin-bottom: 8px;
-  //}
-  //.feature-title {
-    //font-size: 2vw;
-    //font-weight: 400;
-    //font-style: normal;
-  //}
-  //#feedback form {
-  //  flex-basis: 90%;
-  //}
+    .notify div {
+        flex-basis: 90%;
+    }
 }
 
 @media screen and (min-width: 1024px) {
-  //h1 span,
-  //.logotype  {
-  //  font-size: 72px;
-  //  font-weight: 400;
-  //}
-  //.section-heading {
-  //  h1 {
-  //    font-size: 2vw;
-      //font-weight: 400;
-    //}
-  //}
-  //h2 {
-  //  font-weight: 400;
-    //font-size: 1.3vw;
-    //margin: 4px 0 8px;
-  //}
-  //.notify div {
-  //  flex-basis: 90%;
-  //}
-  //.recent-items {
-  //  div.items-box,
-  //  div.box-item {
-  //    flex-basis: 70%;
-  //  }
-  //}
-  //.contact-icon {
-    //font-size: 3vw;
-  //}
-  //.contact-item {
-  //  text-align: initial;
-  //  span {
-      //font-size: 3vw;
-    //}
-  //}
-  //.feature-icon {
-    //font-size: 2vw;
-    //margin-bottom: 8px;
-  //}
-  //.feature-title {
-    //font-size: 1.6vw;
-    //font-weight: 400;
-    //font-style: normal;
-  //}
-  #feedback form {
-    flex-basis: 90%;
-  }
+    #feedback form {
+        flex-basis: 90%;
+    }
 }

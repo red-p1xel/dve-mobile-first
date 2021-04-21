@@ -1,6 +1,7 @@
 {
   "name": "dve-mobile-first",
   "version": "1.0.0",
+  "main": "pub/js/main.js",
   "devDependencies": {
     "@lodder/grunt-postcss": "^3.0.0",
     "autoprefixer": "^10.2.5",
@@ -10,9 +11,12 @@
     "grunt-contrib-imagemin": "^4.0.0",
     "grunt-contrib-less": "^3.0.0",
     "grunt-contrib-watch": "^1.1.0",
-    "postcss": "^8.2.10"
+    "postcss": "^8.2.10",
+    "grunt-browserify": "^6.0.0",
+    "grunt-contrib-uglify": "^5.0.1"
   },
   "dependencies": {
+    "jquery": "^3.6.0",
     "pixrem": "^5.0.0"
   }
 }

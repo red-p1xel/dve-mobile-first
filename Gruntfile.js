@@ -1,5 +1,22 @@
 module.exports = function(grunt) {
     grunt.initConfig({
+        //    pkg: grunt.file.readJSON('package.json'),
+        uglify: {
+            options: {
+                banner: '/*! Grunt Uglify <%= grunt.template.today("yyyy-mm-dd") %> */ '
+            },
+            build: {
+                src: 'pub/js/bundle.js',
+                dest: 'pub/js/bundle.min.js'
+            }
+        },
+        browserify: {
+            build: {
+                src: 'pub/js/main.js',
+                dest: 'pub/js/bundle.js'
+            }
+        },
+
         less: {
             dev: {
                 options: {
@@ -93,6 +110,10 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-imagemin');
     grunt.loadNpmTasks('grunt-contrib-watch');
 
-    grunt.registerTask('default', ['less:prod', 'postcss:prod', 'imagemin']);
-    grunt.registerTask('dev', ['less:dev', 'postcss:dev', 'imagemin', 'watch']);
+    // Load the plugin that provides the "uglify" task.
+    grunt.loadNpmTasks('grunt-contrib-uglify');
+    grunt.loadNpmTasks('grunt-browserify');
+
+    grunt.registerTask('default', ['browserify', 'uglify', 'less:prod', 'postcss:prod', 'imagemin']);
+    grunt.registerTask('dev', ['browserify', 'uglify', 'less:dev', 'postcss:dev', 'imagemin', 'watch']);
 };

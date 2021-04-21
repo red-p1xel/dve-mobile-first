@@ -1,18 +1,36 @@
 .welcome {
-  text-align: center;
-  z-index: 100;
+    text-align: center;
+    background-color: @darkgrey;
+    background-image: url("https://i.ibb.co/VQCgnhq/keyboard-886462-1280.jpg");
+    //background-image: url("https://i.ibb.co/njQgf5V/WLC-SLIDE-1.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; // or use contain
+    height: 334px;
 
-  img {
-    width: 100%;
-  }
-
-  .text-container {
-    position: absolute;
-
-    p {
-      font-family: 'UbuntuRegular';
-      font-size: 18px;
-      padding: 10px 20px;
+    img {
+        width: 100%;
     }
-  }
+
+    .text-container {
+        position: absolute;
+
+        p {
+            font-family: 'UbuntuRegular';
+            font-size: 18px;
+            padding: 10px 20px;
+        }
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .welcome {
+        height: 487px;
+
+        .text-container {
+            p {
+                font-size: 26px;
+            }
+        }
+    }
 }

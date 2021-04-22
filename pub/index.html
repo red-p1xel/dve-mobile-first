@@ -197,7 +197,6 @@
 
     <section class="talk-to-us bkg-darkgray">
         <div class="txt-white">
-            <!-- TODO: Fix color filling -->
             <h1>
                 <span class="txt-white">Talk </span><span class="txt-orange">To Us</span>
             </h1>
@@ -217,64 +216,71 @@
             </div>
             <div class="description">
                 <p class="txt-mid-gray">
+                    <!-- TEXT FOR MOBILE
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor  ut labore eturet dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.  Lorem ipsum dolor       sit amet, consectetur adipisicing elit, sed do eiusmod tempor  ut labore eturet dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit
+                    -->
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor  ut labore eturet dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.  Lorem ipsum dolor       sit amet, consectetur adipisicing elit, sed do eiusmod tempor  ut labore eturet dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.
                 </p>
             </div>
         </div>
-    </section>
-    <div class="our-location bkg-darkgray">
-        <div class="inner-container">
-            <img alt="Our Location" src="../assets/dist/images/gmap.png">
-        </div>
-    </div>
-    <section class="contact-details bkg-white">
-        <div class="inner-container">
-            <div class="section-heading">
-                <h1 class="section-title">Contact Details</h1>
-                <!-- TODO: Underline -->
-            </div>
-
-            <div class="contacts-box">
-                <div class="phone-num txt-gray">
-                    <div class="contact-item-icon">
-                        <i class="contact-icon txt-orange fa fa-phone"></i>
-                    </div>
-
-                    <div class="contact-item">
-                        <span>(093) 145 01 01</span>
-                    </div>
-                </div>
-
-                <div class="email-addr txt-gray">
-                    <div class="contact-item-icon">
-                        <i class="contact-icon txt-orange fa fa-envelope-o"></i>
-                    </div>
-                    <div class="contact-item">
-                        <span>example@freemail.com</span>
-                    </div>
-                </div>
-
-                <div class="location-addr txt-gray">
-                    <div class="contact-item-icon">
-                        <i class="contact-icon txt-orange fa fa-map-signs"></i>
-                    </div>
-                    <div class="contact-item">
-                        <span>No.8, New St, 29th Sector, Cherkasy, Ukraine</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="feedback">
-                <form class="contact-form bkg-white txt-dark-gray" action="#" method="post">
-                    <div class="form-box contact-form">
-                        <input id="input-name" class="bkg__form-fields" type="text" placeholder="Name">
-                        <input id="input-email" class="bkg__form-fields" type="email" placeholder="Email">
-                        <textarea id="input-message" class="bkg__form-fields" name="message" placeholder="Message"></textarea>
-                        <button class="bkg__btn-submission txt-white" type="submit">Submit</button>
-                    </div>
-                </form>
+        <div class="our-location bkg-darkgray">
+            <div class="inner-container">
+                <img alt="Our Location" src="images/gmap.png">
             </div>
         </div>
+        <div class="contact-details bkg-white">
+            <div class="inner-container">
+                <div class="section-heading">
+                    <span class="section-title">Contact Details:</span>
+                </div>
+
+                <div class="contacts-box">
+                    <div class="contact-item">
+                        <div class="text-container">
+                            <i class="contact-icon txt-orange fa fa-phone"></i>
+                        </div>
+                        <div class="text-container">
+                            <p class="contact-data txt-mid-gray">(093) 145 01 01</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="text-container">
+                            <i class="contact-icon txt-orange fa fa-envelope-o"></i>
+                        </div>
+                        <div class="text-container">
+                            <p class="contact-data txt-mid-gray">Example@freemail.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="text-container">
+                            <i class="contact-icon txt-orange fa fa-map-marker"></i>
+                        </div>
+                        <div class="text-container">
+                            <p class="contact-data txt-mid-gray">
+                                <!-- TEXT FOR MOBILE:
+                                    No.8, New St, 29th Sector, Cherkasy, Ukraine
+                                -->
+                                No.128, New St, 29th Sector,<br>Cherkasy, Ukraine
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="clear: both"></div>
+
+                <div class="feedback">
+                    <form class="contact-form bkg-white txt-dark-gray" action="#" method="post">
+                        <div class="form-box contact-form">
+                            <input id="input-name" class="bkg__form-fields" type="text" placeholder="Name">
+                            <input id="input-email" class="bkg__form-fields" type="email" placeholder="Email">
+                            <textarea id="input-message" class="bkg__form-fields" name="message" placeholder="Message"></textarea>
+                            <button class="bkg__btn-submission txt-white" type="submit">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
     </section>
 
     <footer class="bkg__footer centered-flex">

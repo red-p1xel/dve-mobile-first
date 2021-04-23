@@ -85,12 +85,14 @@ header {
     header {
         .main-menu {
             display: flex;
+            position: static;
             flex-direction: row-reverse;
             justify-content: space-between;
             margin-left: 117px;
             margin-right: 117px;
-            padding-top: 25px;
-            padding-bottom: 25px;
+            height: 90px;
+            //padding-top: 25px;
+            //padding-bottom: 25px;
 
             div.box {
                 padding-bottom: 0;
@@ -110,8 +112,12 @@ header {
             div.mobile-menu {
                 background-color: transparent;
                 display: flex;
-                position: relative;
-                margin-left: auto;
+                //position: relative;
+                //margin-left: auto;
+                position: static;
+                flex-wrap: wrap-reverse;
+                margin-bottom: 32px;
+                margin-left: 475px;
 
                 ul.menu {
                     background-color: @white;
@@ -130,6 +136,7 @@ header {
                             border-bottom: solid @white 2px;
                             font-family: 'UbuntuRegular';
                             font-size: 15px;
+                            font-weight: 600;
                             display: block;
                             color: @dark;
                             text-decoration: none;

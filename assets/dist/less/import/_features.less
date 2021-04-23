@@ -2,6 +2,10 @@
     border-top: #f36b47 solid 8px;
 
     .inner-container {
+        .features-box:nth-child(2) {
+            //margin-left: 34px;
+        }
+
         .features-box {
             width: 100%;
             margin: auto;
@@ -22,10 +26,12 @@
             }
 
             .feature-description {
-                margin-top: 9px;
+                margin-top: 15px;
                 margin-bottom: 9px;
+                margin-left: 2px;
                 font-family: 'UbuntuRegular';
                 font-size: 18px;
+                line-height: 1.5;
             }
         }
     }
@@ -34,8 +40,11 @@
 @media screen and (min-width: 1024px) {
     .features {
         border-top: none;
-        margin: 40px 87px 43px 87px;
-        padding: 0;
+        //margin: 7px 100px 43px 87px;
+        //margin: 40px 87px 43px 87px;
+        //padding: 0;
+        padding-top: 8px;
+        padding-bottom: 25px;
 
         .inner-container {
             display: flex;
@@ -48,7 +57,7 @@
 
             .features-box {
                 margin-right: 32px;
-                margin-left: 32px;
+                margin-left: 28px;
                 padding: 0;
 
                 .feature-title {

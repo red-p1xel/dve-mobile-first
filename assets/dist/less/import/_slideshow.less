@@ -1,0 +1,123 @@
+.slideshow {
+    box-sizing: border-box;
+    margin: 0 auto;
+    height: 490px;
+    width: 100%;
+
+    div {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 100%;
+    }
+
+    .slide img {
+        object-fit: cover;
+        height: 100%;
+        width: 100%;
+    }
+
+    .item-1 {
+        text-align: center;
+        background-color: @white;
+        background-image: url("https://i.ibb.co/VQCgnhq/keyboard-886462-1280.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover; // or use contain
+    }
+
+    .item-2 {
+        text-align: center;
+        background-color: @white;
+        background-image: url("https://i.ibb.co/VQCgnhq/keyboard-886462-1280.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover; // or use contain
+    }
+
+    .item-3 {
+        text-align: center;
+        background-color: @white;
+        background-image: url("https://i.ibb.co/WD62LGC/Slide.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover; // or use contain
+    }
+
+    .slide-btn {
+        background: transparent;
+        outline: none;
+        border: none;
+        transition: all 0.3s;
+        padding: 0 10px 0 10px;
+
+        i {
+            color: @mid-orange;
+            font-size: 48px;
+            opacity: 0.6;
+            transition: all 0.3s;
+        }
+    }
+
+    .prev {
+        position: absolute;
+        top: 10px;
+        left: 18px;
+        bottom: 10px;
+    }
+
+    .next {
+        position: absolute;
+        top: 10px;
+        right: 18px;
+        bottom: 10px;
+    }
+
+    .slider-dots {
+        opacity: 0.0;
+        list-style: none;
+        display: inline-block;
+        padding-left: 0;
+        margin-bottom: 0;
+        position: absolute;
+        left: 50%;
+        bottom: 3%;
+        transform: translate(-50%, 0);
+        transition: all 0.3s;
+
+        li {
+            color: @dark;
+            display: inline;
+            font-size: 48px;
+            margin-right: 5px;
+            cursor: pointer;
+        }
+
+        .active-dot {
+            color: @white;
+        }
+    }
+}
+
+.slideshow:hover i,
+.slideshow:hover .slider-dots {
+    opacity: 1;
+}
+
+.slide-btn :active,
+.slide-btn:focus {
+    outline: none;
+}
+
+
+@media screen and (min-width: 1024px) {
+    .slideshow {
+        .prev {
+            left: 80px;
+        }
+
+        .next {
+            right: 80px;
+        }
+    }
+}

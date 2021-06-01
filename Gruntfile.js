@@ -87,7 +87,19 @@ module.exports = function(grunt) {
             }
         },
 
+        jshint: {
+            files: ['Gruntfile.js', 'pub/js/**/*.js'],
+            options: {
+                globals: {
+                    jQuery: true
+                }
+            }
+        },
+
         watch: {
+            jshint: {
+                files: ['<%= jshint.files %>'],
+            },
             less: {
                 files: ['assets/dist/less/**/*.less'],
                 tasks: ['less:dev', 'postcss:dev']
@@ -114,6 +126,6 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-browserify');
 
-    grunt.registerTask('default', ['browserify', 'uglify', 'less:prod', 'postcss:prod', 'imagemin']);
+    grunt.registerTask('default', ['jshint', 'browserify', 'uglify', 'less:prod', 'postcss:prod', 'imagemin']);
     grunt.registerTask('dev', ['browserify', 'uglify', 'less:dev', 'postcss:dev', 'imagemin', 'watch']);
 };

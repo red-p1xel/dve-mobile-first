@@ -13,3 +13,4 @@
 /pub/images/*
 !/pub/images/.gitkeep
 package-lock.json
+pub/js/bundle.min.js

@@ -1,0 +1,75 @@
+.features {
+    border-top: #f36b47 solid 8px;
+
+    .inner-container {
+        .features-box:nth-child(2) {
+            //margin-left: 34px;
+        }
+
+        .features-box {
+            width: 100%;
+            margin: auto;
+            overflow: hidden;
+            padding-bottom: 20px;
+
+            .feature-icon {
+                padding-bottom: 10px;
+
+                i {
+                    font-size: 30px;
+                }
+            }
+
+            .feature-title {
+                font-family: 'MyriadProRegular';
+                font-size: 24px;
+            }
+
+            .feature-description {
+                margin-top: 15px;
+                margin-bottom: 9px;
+                margin-left: 2px;
+                font-family: 'UbuntuRegular';
+                font-size: 18px;
+                line-height: 1.5;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .features {
+        border-top: none;
+        //margin: 7px 100px 43px 87px;
+        //margin: 40px 87px 43px 87px;
+        //padding: 0;
+        padding-top: 8px;
+        padding-bottom: 25px;
+
+        .inner-container {
+            display: flex;
+            flex-wrap: initial;
+            justify-content: right;
+            margin: 0 auto;
+            padding: 0;
+            overflow: auto;
+            width: 100%;
+
+            .features-box {
+                margin-right: 32px;
+                margin-left: 28px;
+                padding: 0;
+
+                .feature-title {
+                    font-size: 20px;
+                }
+
+                .feature-description {
+                    font-size: 12px;
+                    text-align: start;
+
+                }
+            }
+        }
+    }
+}

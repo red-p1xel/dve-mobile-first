@@ -1,0 +1,238 @@
+/* General styles */
+/* -------------- */
+body {
+    margin: 0 auto;
+}
+
+body.menu-open {
+    overflow: hidden;
+}
+
+a {
+    color: @white;
+}
+
+h1, h2 {
+    color: @darkgrey;
+    font-weight: 500;
+    margin: 0;
+    padding: 0;
+
+    span {
+        font-weight: 500;
+        margin: 0;
+        padding: 0;
+    }
+}
+
+.inner-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.section-heading {
+    font-family: 'UbuntuRegular';
+    display: inline-block;
+    margin: 0;
+    overflow: hidden;
+    max-width: 216em;
+}
+
+.centered-flex {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+}
+
+.fixed-centered-flex {
+    display: flex;
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+}
+
+.txt-uppercase {
+    text-transform: uppercase;
+}
+
+/* Declare border styles */
+/* --------------------- */
+.brd-top-orange-solid-1 {
+    border-top: solid @orange 1px;
+}
+
+.brd-bottom-orange-solid-1 {
+    border-bottom: solid @orange 1px;
+}
+
+.bottom-border-1 {
+    height: 1px;
+    margin: 4px auto;
+    max-width: 95%;
+}
+
+.bottom-border-2 {
+    height: 2px;
+    margin: 4px auto;
+}
+
+.solid-underline-2 {
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+    text-decoration-thickness: 2px;
+}
+
+/* Declare text color's */
+/* -------------------- */
+.txt-gray {
+    color: @gray;
+}
+
+.txt-mid-gray {
+    color: @mid-gray;
+}
+
+.txt-dark-gray {
+    color: @darker-gray;
+}
+
+.txt-orange {
+    color: @mid-orange;
+}
+
+.txt-dark-orange {
+    color: @darkorange;
+}
+
+.txt-white {
+    color: @white;
+}
+
+.txt-dark-silver {
+  color: @dark-silver;
+}
+
+.txt-mid-orange-alt {
+    color: @mid-orange-alt;
+}
+
+/* Declare text extension */
+/* ---------------------- */
+.bold-text {
+    font-weight: bold;
+}
+
+/* Declare styles for sections */
+/* --------------------------- */
+.about,
+.features,
+.recent-items {
+    display: block;
+    padding: 40px 31px 31px 31px;
+    text-align: center;
+}
+
+section {
+    padding: 0;
+    text-align: center;
+    height: 100%;
+}
+
+.text-container {
+    display: block;
+    position: relative;
+    overflow: hidden;
+}
+
+.description {
+    margin: 20px auto 48px;
+}
+
+.section-title {
+    text-align: center;
+    border-bottom: solid @mid-orange 2px;
+    padding-bottom: 2px;
+}
+
+/* Declare extended background colors (with alpha / background transparency) */
+/* ------------------------------------------------------------------------- */
+.bkg-darkgrey-50-20 {
+    background: @darkgrey-50-20;
+}
+
+/* Declare background colors */
+/* ------------------------- */
+.bkg-white {
+    background-color: @white;
+}
+
+.bkg-light-orange {
+    background-color: @light-orange;
+}
+
+.bkg-darkorange {
+    background-color: @darkorange;
+}
+
+.bkg-mid-orange {
+    background-color: @mid-orange
+}
+
+.bkg-light-gray {
+    background-color: @light-gray;
+}
+
+.bkg-darkgray {
+    background-color: @darkgray;
+}
+
+.bkg-darker-gray {
+    background-color: @darker-gray;
+}
+
+.bkg__btn-submission {
+    background-color: @orange;
+}
+
+.bkg__form-fields {
+    background-color: @silver;
+}
+
+.bkg__footer {
+    background-color: @orange-alt;
+}
+
+/* Media-queries for different displays */
+/*--------------------------------------*/
+@media screen and (min-width: 320px) {
+    .notify div {
+        flex-basis: 90%;
+    }
+
+    .recent-items {
+        .items-box {
+            .box-item {
+                width: 250px;
+            }
+        }
+    }
+
+    #feedback form {
+        flex-basis: 90%;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .notify div {
+        flex-basis: 90%;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    #feedback form {
+        flex-basis: 90%;
+    }
+}

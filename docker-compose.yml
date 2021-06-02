@@ -62,7 +62,6 @@ services:
 #      - elasticsearch
     external_links:
       - mysql57:mysql
-      - mailhog
     network_mode: bridge
     environment:
       # Must be set to some of the domains for xdebug to work. Should have server configured in

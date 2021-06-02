@@ -1,0 +1,306 @@
+.contact-us {
+    margin-bottom: 208px;
+
+    .inner-container {
+        margin: 0;
+        padding: 0;
+
+        .section-heading {
+            padding-top: 60px;
+
+            .section-title {
+                color: @darkgrey;
+                font-family: 'UbuntuRegular';
+                font-size: 48px;
+                font-weight: 100;
+            }
+        }
+
+        .description {
+            margin: 50px 23px 107px 23px;
+
+            p {
+                margin: 0;
+                font-family: 'UbuntuRegular';
+                font-size: 24px;
+            }
+        }
+    }
+
+    .our-location {
+        .inner-container {
+            max-height: 520px;
+
+            img {
+                height: 520px;
+                width: 100%;
+            }
+        }
+    }
+
+    .contact-details {
+        .inner-container {
+            margin-top: 69px;
+
+            .section-heading {
+                padding: 0;
+
+                .section-title {
+                    border: none;
+                    font-family: 'UbuntuMedium';
+                    font-size: 48px;
+                    text-align: center;
+                }
+
+                &:after {
+                    display: block;
+                    content: '';
+                    border-bottom: @mid-orange solid 2px;
+                    margin-left: 62px;
+                    width: 205px;
+                }
+            }
+        }
+
+        .contacts-box {
+            display: block;
+            margin-top: 75px;
+            margin-left: 45px;
+            text-align: start;
+            max-width: 1200px;
+            width: 90%;
+
+            .contact-item {
+                i.contact-icon {
+                    font-size: 27px;
+                }
+
+                .text-container {
+                    display: table-cell;
+                    vertical-align: middle;
+
+                    address, a, p {
+                        text-decoration: none;
+                        font-family: 'UbuntuRegular';
+                        font-size: 30px;
+                        margin: 25px 0 25px 36px;
+                    }
+                }
+            }
+
+            &:after {
+                content: '';
+                clear: both;
+                display: none;
+            }
+        }
+
+        .feedback {
+            margin: 0 5px 0 11px;
+
+            form {
+                text-align: center;
+                margin: 0;
+                float: left;
+                width: 100%;
+
+                .form-box {
+                    margin-bottom: 1em;
+                }
+
+                input,
+                textarea {
+                    border: @mid-silver solid 1px;
+                    box-shadow: 0 0 10px @light-gray-shadow;
+                    outline: 0;
+                    padding: 1em;
+                    border-radius: 3px;
+                    margin-top: 0.5em;
+                    overflow: hidden;
+                    width: 92%;
+                }
+
+                textarea {
+                    height: 169px;
+                    resize: none;
+                }
+
+                button {
+                    font-family: 'MyriadProRegular';
+                    font-size: 20px;
+                    border: 0;
+                    outline: 0;
+                    padding-top: 3px;
+                    padding-bottom: 8px;
+                    border-radius: 3px;
+                    margin-top: 12px;
+                    overflow: hidden;
+                    cursor: pointer;
+                    width: 303px;
+                    height: 44px;
+
+                    &:hover {
+                        background-color: @darkorange;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .contact-us {
+        margin-left: 80px;
+        margin-right: 80px;
+
+        .inner-container {
+            margin: 0 auto;
+            max-width: 100%;
+
+            .section-heading {
+                .section-title {
+                    font-family: 'UbuntuMedium';
+                    font-size: 26px;
+                }
+            }
+
+            .description {
+                margin: 14px 0 48px 0;
+
+                p {
+                    font-family: 'UbuntuRegular';
+                    font-size: 16px;
+                    line-height: 2.0;
+                }
+            }
+        }
+
+        .wrapper {
+            display: flex;
+        }
+
+        .our-location {
+            width: 50%;
+
+            .inner-container {
+                max-width: 528px;
+            }
+        }
+
+        .contact-details {
+            width: 50%;
+
+            .inner-container {
+                margin: 0;
+                padding: 0;
+                max-width: none;
+                width: auto;
+
+                .section-heading {
+                    display: block;
+                    color: @darkgrey;
+                    text-align: start;
+                    max-width: none;
+                    margin: 0 0 16px 22px;
+
+                    .section-title {
+                        font-family: 'UbuntuMedium';
+                        font-size: 20px;
+                    }
+
+                    &:after {
+                        display: none;
+                        content: '';
+                    }
+                }
+
+                .contacts-box {
+                    display: block;
+                    text-align: start;
+                    margin: 0 0 0 64px;
+                    max-width: none;
+                    width: auto;
+
+                    .contact-item {
+                        margin-bottom: 15px;
+
+                        .text-container {
+                            display: table-cell;
+                            vertical-align: top;
+
+                            i.contact-icon {
+                                font-size: 20px;
+                                margin: 0 15px 0;
+                                padding: 0;
+                            }
+
+                            address, a, p {
+                                font-size: 16px;
+                                font-style: normal;
+                                margin: 0;
+                                padding: 0;
+                            }
+                        }
+                    }
+
+                    // Reset spacing for last element of contact items
+                    .contact-item:last-child {
+                        margin-bottom: 10px;
+                        padding: 0;
+                    }
+                }
+
+                .feedback {
+                    margin-left: 64px;
+
+                    form {
+                        text-align: initial;
+                    }
+
+                    .form-box {
+                        width: 100%;
+
+                        input {
+                            box-sizing: border-box;
+                            font-family: UbuntuRegular;
+                            font-size: 16px;
+                            padding-top: 14px;
+                            padding-left: 8px;
+                            height: 50px;
+                            width: 100%;
+                            max-width: 319px;
+                        }
+
+                        textarea {
+                            box-sizing: border-box;
+                            font-family: 'UbuntuRegular';
+                            font-size: 16px;
+                            margin-top: 8px;
+                            padding-top: 10px;
+                            padding-left: 8px;
+                            height: 160px;
+                            width: 100%;
+                        }
+
+                        button {
+                            font-family: 'MyriadProRegular';
+                            font-size: 20px;
+                            margin-top: 0;
+                            height: 40px;
+                            width: 118px;
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1199px) {
+    .inner-container {
+        width: 1170px;
+        margin: 0 auto;
+    }
+}
+

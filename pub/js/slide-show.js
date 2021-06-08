@@ -3,25 +3,18 @@
 // ==================
 
 (function ($) {
-
-// ----------------------------
-// Slideshow methods definition
-// ----------------------------
-
     var actionInterval = null;
-
     var methods = {
         init: function (options) {
-            // This is the easiest way to have default options.
-            // These are the default settings.
             var settings = $.extend({
                 autoPlay: true,
                 defaultDelay: 3000,
                 delayInterval: 400,
-                visibleButtons: 'all',
+                autoplayDelay: 400,
+                dots: false,
+                arrows: true,
 
                 classes: {
-                    main: 'slideshow',
                     slide: 'slide',
                     current: 'current',
 
@@ -44,152 +37,111 @@
                     },
                 },
 
-                templates: {
-                    btnPrevious:
-                        "<button class=\"" + this.classes.buttons.mainClassname + " " + "\">"
-                        +"<i class=\"" + this.classes.buttons.prev.icon + "\"></i></button>"
-                    ,
-                    btnNext:
-                        "<button class=\"" + this.classes.buttons.mainClassname + " " + "\">"
-                        +"<i class=\"" + this.classes.buttons.prev.icon + "\"></i></button>"
-                    ,
-                    sliderButtons: this.templates.btnPrevious + this.templates.btnNext,
-                    activeDot: null,
-                    dotControls: this.activeDot,
-                },
-            }, options );
+                btnArrows: "<button class=\"slide-btn prev\"><i class=\"fa fa-chevron-left\"></i></button>" +
+                    "<button class=\"slide-btn next\"><i class=\"fa fa-chevron-right\"></i></button\>",
+                btnDots: "<li class=\"dot active-dot\">&bull;</li>",
 
-            // $(".slideshow").append(this.).append(buttons);
+            }, options);
 
-            if (this.autoPlay === true) {
-                this.autoplay();
+            console.info("Settings:", settings);
+
+            return this.each(function () {
+                if (settings.arrows === true) {
+                    $(".slideshow").append(methods.appendButtons());
+                }
+                if (settings.dots === true) {
+                    $(".slideshow").append(methods.appendDots());
+                }
+                if (settings.autoPlay === true) {
+                    methods.autoplay(settings);
+                }
+            });
+        },
+
+        appendButtons: function () {
+            let buttons = "<button class=\"slide-btn prev\"><i class=\"fa fa-chevron-left\"></i></button>" +
+                "<button class=\"slide-btn next\"><i class=\"fa fa-chevron-right\"></i></button\>";
+
+            return buttons;
+        },
+
+        appendDots: function () {
+            let d = "<li class=\"dot active-dot\">&bull;</li>";
+            for (let i = 1; i < $('.slide').length; i++) {
+                d = d + "<li class=\"dot\">&bull;</li>";
             }
+            let dots = "<ul class=\"slider-dots\">" + d + "</ul\>";
+
+            return dots;
         },
 
-        autoplay: function () {
-            actionInterval = setInterval(this.slide, this.defaultDelay);
+        autoplay: function (settings) {
+            console.info(' >>> ', settings.classes.slide, settings.defaultDelay);
+            actionInterval = setInterval(methods.next, settings.defaultDelay);
         },
 
+        next: function (settings) {
+            let Slide = null;
+            let currentSlide = $("." + settings.classes.current);
+            let nextSlide = currentSlide.next("." + settings.classes.slide);
 
-    }
-
-// --------------------------------
-//  Internal functions definitions
-// --------------------------------
-
-    /**
-     * Method for create dot items.
-     *
-     * @param itemClass
-     * @returns {methods.activeDot}
-     */
-    $.fn.createDotItem = function (itemClass) {
-        let item = null;
-
-        if (typeof itemClass === 'undefined') {
-            item = "<li class=\"" + this.classes.buttons.dots.active + " " + this.buttons.dots.main + "\">"
-                        + this.buttons.dots.htmlChar
-                + "</li>";
-
-        } else {
-            item = "<li class=\"" + itemClass + "\">" + this.buttons.dots.htmlChar + "</li>";
-        }
-
-        //-- Create list of slides dot controls
-        for (let i = 1; i < $('.' + this.classes.slide).length; i++) {
-            let controls = this.templates.dotControls;
-            controls = controls + item;
-        }
-
-        return this.templates.dotControls;
-    }
-
-    /**
-     * Toggle autoplaying slideshow.
-     *
-     * @param action
-     * @param timeout
-     */
-    $.fn.toggleAutoPlay = function (action, timeout) {
-        timeout = (timeout === null) ? this.defaultDelay : timeout;
-
-        if (action === 'start') {
-            actionInterval = setInterval(this.slide, timeout);
-        } else if (action === 'stop') {
-            clearInterval(actionInterval);
-        }
-
-    }
-
-    /**
-     * Toggle next or previous slide.
-     *
-     * @param action         Toggle slide action ('next', 'prev' or something else).
-     * @param delayInterval  Delay of toggle slide.
-     * @param index          Dot element list index.
-     */
-    $.fn.toggleSlide = function (action, delayInterval, index) {
-        let nextSlide = null;
-        let prevSlide = null;
-
-        let nextDot = null;
-        let prevDot = null;
-
-        let Slide = null;
-        let Dot = null;
-
-        let selector = '.' + this.classes.slide;
-        let dotSelector = '.' + this.classes.buttons.dots.active;
-        let current = $('.' + this.classes.current);
-        let requiredElement = $(selector).eq( (typeof index !== 'undefined') ? index : 0 );
-        let delay = (typeof delayInterval !== 'undefined') ? delayInterval : this.delayInterval;
-
-        if (action === 'next') {
-            nextSlide = current.next(selector);
             if (nextSlide.length === 0) {
-                nextDot = $(selector).first();
-                nextSlide = $(selector).first();
+                // nextDot = $('.dot').first();
+                nextSlide = $('.' + settings.classes.slide).first();
             }
             Slide = nextSlide;
-            Dot = nextDot;
-        } else if (action === 'prev') {
-            prevSlide = current.prev(selector);
-            if (prevSlide.length === 0) {
-                prevDot = $(dotSelector).last();
-                prevSlide = $(selector).last();
-            }
-            Slide = prevSlide;
-            Dot = prevDot;
-        } else {
-            Slide = requiredElement;
-            Dot = requiredElement;
+            currentSlide.fadeOut(settings.defaultDelay).removeClass(settings.classes.current);
+            Slide.fadeIn(settings.defaultDelay).addClass(settings.classes.current);
+
+            console.info('Next slide action!');
+        },
+
+        prev: function (settings) {
+            console.info('Previous slide action!');
+
+            //---- $(this.classes.buttons.next.class).on('click', function () {
+                // Call slider methods on this place.
+
+                // this.toggleAutoPlay('stop');
+                // this.toggleSlide('next');
+                // this.toggleAutoPlay('start');
+
+                // .bind(this)
+
+            //---- });
         }
 
-        current.fadeOut(delay).removeClass(current);
-        Slide.fadeIn(delay).addClass(current);
-
-        $(dotSelector).removeClass(dotSelector);
-        Dot.addClass(dotSelector);
     }
 
-    $(this.classes.buttons.next.class).on('click', function () {
-        this.toggleAutoPlay('stop');
-        this.toggleSlide('next');
-        this.toggleAutoPlay('start');
-    });
+    $.fn.slider = function (method) {
+        let args = null;
+        // Implementation here
+        if (methods[method]) {
+            args = methods[method].apply(this, Array.prototype.slice.call(arguments, 1));
+            console.info('[]: `init` method called!', arguments);
 
-    $(this.classes.buttons.prev).on('click', function () {
-        this.toggleAutoPlay('stop');
-        this.toggleSlide('prev');
-        this.toggleAutoPlay('start');
-    });
+            return args;
+        } else if (typeof method === 'object' || !method) {
+            console.info('{}: Init method called!');
+            console.info('Arguments is ', arguments);
 
-    $(this.classes.buttons.dots.main).on('click', function () {
-        let index = $(this).index();
+            return methods.init.apply(this, arguments);
+        } else {
+            $.error('Method `' + method + '` not found in jQuery.slider');
+        }
 
-        this.toggleAutoPlay('stop');
-        this.toggleSlide('', index);
-        this.toggleAutoPlay('start');
-    });
+    // For example
+    // -----------
+    /*
+        // Method definition.
+        this.fadeIn('normal', function(){
+            // "this" -  it is DOM element on in palace.
+        });
 
-}(jQuery));
+        // Method usage.
+        $('#element').myPlugin();
+     */
+
+    };
+
+})(jQuery);

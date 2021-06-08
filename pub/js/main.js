@@ -1,5 +1,4 @@
-const $ = require("jquery");
-const
+// const $ = require("jquery");
 
 $(document).ready(function () {
 
@@ -13,7 +12,9 @@ $(document).ready(function () {
 });
 
 
-$(".slideshow > div:gt(0)").hide();
+let slideshow = '.slideshow';
+$(slideshow).slider({
+    dots: true,
+});
 
-$('.slideshow').createDotItem('ffff');
-$(".slideshow").append(this.createDotItem());
+// $(".slideshow > div:gt(0)").hide();
